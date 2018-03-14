@@ -1,0 +1,14 @@
+[
+  {
+    "customer_id": 1,
+    "customer_name": "jen",
+    "balance": 111111,
+    "status": "active"
+  },
+  {
+    "customer_id": 2,
+    "customer_name": "jojo",
+    "balance": 222222222,
+    "status": "active"
+  }
+]

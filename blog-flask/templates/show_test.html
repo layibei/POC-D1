@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>  all customer info </h1>
+    <table>
+        <tr>
+            <td>Customer ID</td>
+            <td>Customer Name</td>
+            <td>Customer Balance</td>
+            <td>Customer Status</td>
+        </tr>
+
+<td>
+    {% for c in customers %}
+
+            <div> {{c.id}} , {{c.username}} , {{c.email}}, {{c.password}}</div>
+
+    {% endfor %}
+</td>
+
+    </table>
+</div>
+<h1>  customer facilty info </h1>
+<div>
+    {% for f in fctys %}
+
+            <div> {{f.customer_id}} , {{f.facility_id}} , {{f.facility_balance}}, {{f.facility_status}}</div>
+
+    {% endfor %}
+</div>
+
+</body>
+</html>

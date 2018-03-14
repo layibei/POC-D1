@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>  all customer info </h1>
+    <table>
+        <tr>
+            <td>Customer ID</td>
+            <td>Customer Name</td>
+            <td>Customer Balance</td>
+            <td>Customer Status</td>
+        </tr>
+
+<td>
+    {% for c in customers %}
+        <a href= {{ url_for(".view", customer_id=c.customer_id) }}>
+            <div> {{c.customer_id}} , {{c.customer_name}} , {{c.balance}}, {{c.status}}</div>
+        </a>
+    {% endfor %}
+</td>
+
+    </table>
+</div>
+<h1>  customer facilty info </h1>
+<div>
+    {% for f in fctys %}
+
+            <div> {{f.customer_id}} , {{f.facility_id}} , {{f.facility_balance}}, {{f.facility_status}}</div>
+
+    {% endfor %}
+</div>
+
+</body>
+</html>

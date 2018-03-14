@@ -1,0 +1,69 @@
+{% extends "bootstrap/base.html" %} <!-- base.html模板继承自bootstrap/base.html -->
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-taget=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<sapn class="icon-bar"></sapn>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">Flasky</a>
+</div>
+<div class="navbar=collapse collapse">
+<ul class="nav navbar-nav">
+<li>
+<a href="/">Home</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="page-header">
+        <div class="container">
+            <h1>Customer Detail Page </h1>
+        </div>
+    </div>
+<!--    <div class="page-header">
+    <h1>Hello, {% if id %}{{ id }}{% else %}Stranger{% endif %}!</h1>
+    <h2>{% if username %}username is {{ username }}{% endif %}</h2>
+    <h2>{% if password %}password is {{ password }}{% endif %}</h2>
+    <h2>{% if email %}email is {{ email }}{% endif %}</h2>
+    </div>-->
+<table class="table table-bordered table-striped table-hover table-condensed ">
+    <thead><tr><td> username </td><td> email </td></tr></thead>
+    <tbody>
+    {% if username %}
+        <tr>
+            <td>{{ username }}</td>
+            <td>{{ email }}</td>
+        </tr>
+    {% endif %}
+    <input type="text" name="input1" value="Test-prefill" disabled="true" background-color:#cccccc>
+    </tbody>
+</table>
+</div>
+
+    <div class="container">
+        <form method="POST">
+            {{ wtf.quick_form(form) }}
+        </form>
+    </div>
+<div>
+<table class="table table-bordered table-striped table-hover table-condensed ">
+    <thead><tr><td> username </td><td> username </td></tr></thead>
+    <tbody>
+    {% for c in customers %}
+        <tr>
+            <td>{{c.username}}</td>
+            <td>{{c.email}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

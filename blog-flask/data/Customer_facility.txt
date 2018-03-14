@@ -1,0 +1,14 @@
+[
+  {
+    "customer_id": 1,
+    "facility_id": "f1",
+    "facility_balance": "32321    ",
+    "facility_status": "active"
+  },
+  {
+    "customer_id": 2,
+    "facility_id": "f2",
+    "facility_balance": "5555555    ",
+    "facility_status": "active"
+  }
+]
